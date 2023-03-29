@@ -1,11 +1,15 @@
 import './App.css';
+import SortDemo from './sort-demo';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        List Demo
+    <div className="app">
+      <header className="app-header">
+        <h2>
+          Linked List Demo
+        </h2>
       </header>
+      <SortDemo></SortDemo>
     </div>
   );
 }
