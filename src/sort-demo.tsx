@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { sortByFirstToLast } from "traverselinkedlist";
 
 interface Item {
   id: number;
@@ -98,7 +99,8 @@ function CardApp() {
   }
 
   function onItemsReset() {
-    setState({ quotes: INITIAL_ITEMS });
+    const sorted = sortByFirstToLast(state.quotes, 'previous', 'next')
+    setState({ quotes: sorted });
   }
 
   return (
