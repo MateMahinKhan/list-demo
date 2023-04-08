@@ -1,13 +1,20 @@
+/* Reset some basic styles */
+body, h4 {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
 .app {
   padding: 30px;
+  height: 100vh;
+  background-color: #e0e0e0;
 }
 
 #items-column {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  border: 1px solid #a5a0a0;
+  align-items: start;
+  width: 100%;
   padding: 15px;
 }
 
@@ -16,14 +23,51 @@
   flex-direction: column;
   gap: 10px;
   margin-bottom: 30px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card {
   display: flex;
   gap: 5px;
+  align-items: center;
+  background-color: #ffffff;
   border: 1px solid #a5a0a0;
-  padding: 5px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s;
 }
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .card-label {
   font-weight: 600;
+  color: #333333;
+  margin-right: 5px;
+}
+
+.sort-column {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
